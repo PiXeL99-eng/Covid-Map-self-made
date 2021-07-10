@@ -22,7 +22,7 @@ var month = d.getMonth() +1;
 var year = d.getFullYear();
 
 
-var array = [];
+let array = [];
 
 app.get('/', (req, res) => res.render("index"));
 app.get('/search', (req, res) => res.render("search",{array:array}));
