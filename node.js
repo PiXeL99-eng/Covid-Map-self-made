@@ -28,7 +28,7 @@ app.get('/', (req, res) => res.render("index"));
 app.get('/search', (req, res) => res.render("search",{array:array}));
 app.post('/search', function (req, res) {
     // console.log(req.body.search);
-    getJSON(`https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pincode=${req.body.search}&date=${date}-${month}-${year}`, function (error, response) {
+    getJSON(`https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pincode=700016&date=10-07-2021`, function (error, response) {
 
         console.log(response);
         let array = response.sessions;
