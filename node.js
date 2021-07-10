@@ -9,7 +9,9 @@ const port = 3000
 
 app.use(express.static("static"))
 app.use(express.urlencoded({ extended: false }))
-app.listen(port || process.env.PORT, () => console.log(`Example app listening on port port!`))
+app.listen(process.env.PORT || 3000, function (e) {
+    console.log("listening to port 3000");
+})
 app.set('view engine', 'ejs')
 
 
