@@ -30,8 +30,8 @@ app.post('/search', function (req, res) {
     // console.log(req.body.search);
     getJSON(`https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pincode=${req.body.search}&date=${date}-${month}-${year}`, function (error, response) {
 
-        // console.log(response.sessions);
-        var array = response.sessions;
+        console.log(response);
+        let array = response.sessions;
 
         res.render("search", { array: array })
     });
