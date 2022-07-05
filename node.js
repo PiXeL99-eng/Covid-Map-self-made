@@ -4,16 +4,16 @@ const app = express()
 const { urlencoded } = require('body-parser');
 const { response } = require('express');
 const { default: fetch } = require('node-fetch');
-const port = 3000
+const port = process.env.PORT || 8000
 
 
 app.use(express.static("static"))
 app.use(express.urlencoded({ extended: false }))
-app.listen(process.env.PORT || 3000, function (e) {
-    console.log("listening to port 3000");
+
+app.listen(port, () => {
+    console.log(`listening to port ${port}`);
 })
 app.set('view engine', 'ejs')
-
 
 
 const d = new Date();
